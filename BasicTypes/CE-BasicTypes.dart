@@ -11,10 +11,9 @@ void main() {
   String Escaping - Using single quote, \, $, inside strings
   Raw String using r - Example is Path in Windows.
   String methods return a new string. Original string is unchanged
-  /*
-
-
    */
+
+  /*
   int variables - int <variable name> = <no>
   double variables - double <variable name> = <no_with_decimal_point>
    */
