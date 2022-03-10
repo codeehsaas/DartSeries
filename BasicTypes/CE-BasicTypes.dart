@@ -1,12 +1,12 @@
 void main() {
+  //Comments start with 2 forward slashes
+  /*
+  You can also use Multi-line comments use /* ... */
+   */
+
   /*
   Main - void main() { } is the entry point of any Dart program. Without it a Dart
   program cannot run.
-   */
-
-  //Comments start with 2 forward slashes
-  /*
-  Multi-line comments use /* ... */
    */
 
   /*
@@ -23,7 +23,7 @@ void main() {
    */
 
   /*
-  String interpolation
+  String Interpolation
    */
 
   /*
