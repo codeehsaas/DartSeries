@@ -1,15 +1,11 @@
 void main() {
   //Comments start with 2 forward slashes
   /*
-  You can also use Multi-line comments use /* ... */
-   */
-
+  A Multi-line comment
+ This is the second line of the comment
   /*
-  Main - void main() { } is the entry point of any Dart program. Without it a Dart
-  program cannot run.
-   */
 
-  /*
+   */
   Variables - Created with <type> <variable name> = <value>
   also with: <var> <variable name> = <value>
   String variables - String <variable name> = '<value>' or "<value>"
