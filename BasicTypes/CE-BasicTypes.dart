@@ -36,7 +36,8 @@ void main() {
   var petAge = 2;
   double petWeight = 52.4;
 
-  print('$petName weighs $petWeight and is of age $petAge');
+  print(
+      '$petName weighs ${petWeight.toStringAsFixed(0)} and is of age $petAge');
 
   /*
   bool variables can only have true or false value
