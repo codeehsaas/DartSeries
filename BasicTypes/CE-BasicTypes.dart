@@ -12,7 +12,7 @@ void main() {
   String variables - String <variable name> = '<value>' or "<value>"
   String Escaping - Using single quote, \, $, inside strings
   Raw String using r - Example is Path in Windows.
-  String methods return a new string. Original string is unchanged
+  String Interpolation using $variable and ${}
    */
 
   /*
@@ -20,11 +20,4 @@ void main() {
   double variables - double <variable name> = <no_with_decimal_point>
    */
 
-  /*
-  String Interpolation
-   */
-
-  /*
-  Type Methods and Properties
-   */
 }
