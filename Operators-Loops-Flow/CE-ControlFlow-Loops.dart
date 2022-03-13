@@ -19,14 +19,29 @@ void main() {
   Logical And, OR: && || (either one), Ternary Operator exp1 ? exp2 : exp3
   - print ( x == y) //equal *note both are num
   - print (x != y) // not equal
-  - Use with any expression that returns bool. Say myemail.com
+  - Use with any expression that returns bool. Say my-email.com
 
 */
 
 /*
   Control Flow
-  if-else
-  for loop
+   - Allow you to make decisions if something is true or not
+   - if(dogBreed = 'Ridgeback') {
+      print('Protective')';
+   } else if...
+  - if-else-else if
+  Loops
+  - while loop
+   - Initialize, Evaluate condition, If True Run, False Exit
+   - Odd no example
+  - for loop
+   - Looping with more control
+   - First initialization, then condition check, then code process & then update
+   - Next time only condition check and update if needed.
+
+  - break & continue
+   - Use break to exit from inner-most loop
+   - Use continue to go right to the start ignore rest of loop code
 */
 
   var x = 10.0;
