@@ -9,7 +9,6 @@ void main() {
    - Operator Precedence forced with ()
     += *=, etc. All work with compound assignment operator
 */
-
 /*
   Relational & Type Operators:
    - They always evaluate a test or condition that returns bool value
@@ -46,8 +45,51 @@ void main() {
    - Use continue to go right to the start ignore rest of loop code
 */
 
-  var x = 17;
+  var x = 5;
   var y = 2;
-  var age = 16;
-  print('x=$x, y=$y, age=$age');
+  var age = 15;
+
+  print(x + y);
+  print(x - y);
+
+  //performs exact division and returns double
+  print('Precise double division ${x / y}');
+
+  //performs integer division
+  print('Integer division ${x ~/ y}');
+
+  //Gives the remainder of division operation
+  print('Remainder of 5 %2 ${5 % 2}');
+
+  var z = x++; //Right side is postfix, left side is prefix
+
+  print(x >= y); // >, <, <=, =>, == , !=
+
+  var email = 'zyraa@gmail.com';
+  //Using ternary operator
+  print(
+      !email.isEmpty && email.contains('@') ? "Valid email" : "Invalid email");
+
+  // <16 Child, 16 <> 18 Youth, >18 Adult
+  if (age < 16) {
+    print('Child');
+    print('Contact your parents');
+  } else if (age > 16 && age <= 18) {
+    print('Youth');
+  } else {
+    //Already > 18 no need to test
+    print('Adult');
+  }
+
+  while (age >= 10) {
+    print('Age $age');
+    age--;
+  }
+  for (var i = 1; i <= 8; i += 10) {
+    if (i == 5) {
+      continue;
+    }
+    print('i $i');
+  }
+  print('x=$x, y=$y, z=$z, age=$age');
 }
