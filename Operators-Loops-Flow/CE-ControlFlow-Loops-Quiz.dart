@@ -11,12 +11,11 @@ void main() {
 
   /*
   Using For Loop
-  Loop from 0 thru 20 (20 in included <=)
-  For each no
-   - If it's divisible by 3 & 5 print "Jhatpat Chatpat"
-   - If it's divisible by 3 only print "Jhatpat"
-   - If it's divisible by 5 only print "Chatpat";
-   - If not by 3 or 5, print "Kuch Bhi"
-
+  - Loop from 15 thru <=55 and increase by 10 in each case (hint: i+=10)
+  - Using for loop to print calorie intake for ages for these ages:
+  - <= 15/2400 (means anything less than or equal to 15 needs 2400 calories)
+  - 20<->25/2800 (<-> from 20 till 25...20/25 are included too...needs 2800 cal),
+  - 26<->45/2600
+  - >45/2400 (Greater than 45 needs 2400 calories)
    */
 }
