@@ -49,6 +49,5 @@ void main() {
   var x = 17;
   var y = 2;
   var age = 16;
-
   print('x=$x, y=$y, age=$age');
 }
