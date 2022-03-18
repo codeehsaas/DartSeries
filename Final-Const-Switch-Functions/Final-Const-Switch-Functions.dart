@@ -2,12 +2,9 @@ void main() {
   /*
 Final var - You know you will not change it again. Can only be set once.
    Const - Compile time constant. Has to be set when declared.
-
   final String petBreed;
-  const int hrsInDay;
+  const int hrsInDay = 24;
   petBreed = 'Ridgeback';
-  var petName = 'Zyraa';
-  print('Pet is $petBreed');
 */
 
   /*
@@ -22,7 +19,8 @@ Enumerated types - Use to represent easy-to-remember pre-defined const values
 
   /*
 Switch - Control flow statement
-- Use with int, string, or constants using ==
+- Use with int, string, or constants using ==.
+- All should be of same type
 - Each non-empty clause ends with break
 - Can use break,continue, throw, re-throw or return
 - Use default clause to execute code when nothing matches your variable
