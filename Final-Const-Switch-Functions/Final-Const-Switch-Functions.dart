@@ -1,7 +1,8 @@
 enum Snacks { Samosa, Barfi, Idli, Pakora, Gulabjamun }
 
-void sayGreeting(String name, {String greet = 'Hello'}) {
-  print('** $greet, $name **');
+void sayGreeting(String name,
+    {String decorator = '**', String greeting = 'Hello'}) {
+  print('$decorator $greeting! $name $decorator');
 }
 
 double getRectArea(double length, double width) {
@@ -16,7 +17,6 @@ Final var - You know you will not change it again. Can only be set once.
   const int hrsInDay = 24;
   petBreed = 'Ridgeback';
 */
-
   /*
 Enumerated types - Use to represent easy-to-remember pre-defined const values
   - enum Lang {Python, Dart, C++, Java}
@@ -50,6 +50,7 @@ Functions - Allow to keep often used code in one place.
 - Named Parameters are optional unless marked as required.
   - Such parameters are wrapped in {param1 value}
   - When calling such functions, use paramName : value to call
+  - Multiple named parameters are wrapped in one {} separated by comma
 
    */
 
@@ -73,11 +74,10 @@ Functions - Allow to keep often used code in one place.
       print("Pakora or Gulabjamun are liked by most people");
       break;
   }
-
-  sayGreeting(name, greet: 'Namaste');
+  sayGreeting('Derek', decorator: '^^^');
 
   for (var i = 1.0; i < 3.0; i += 0.5) {
     var length = i + 0.5;
-    print('Rect $length x $i = ${getRectArea(length, i)}');
+    print('Area of rect ($length x $i): ${getRectArea(length, i)}');
   }
 }
