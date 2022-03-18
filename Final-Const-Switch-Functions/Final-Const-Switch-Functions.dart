@@ -1,3 +1,13 @@
+enum Snacks { Samosa, Barfi, Idli, Pakora, Gulabjamun }
+
+void sayGreeting(String name, {String greet = 'Hello'}) {
+  print('** $greet, $name **');
+}
+
+double getRectArea(double length, double width) {
+  return length * width;
+}
+
 void main() {
   /*
 Final var - You know you will not change it again. Can only be set once.
@@ -43,6 +53,31 @@ Functions - Allow to keep often used code in one place.
 
    */
 
-  var name = 'Zyraa';
-  print('Hello, $name 😊');
+  String name = 'Zyraa';
+  final mySnack = Snacks.Gulabjamun;
+
+  print('Hello, $name 😊. I like ${mySnack.name} with index ${mySnack.index}');
+  print('Snack values ${Snacks.values}');
+
+  switch (mySnack) {
+    case Snacks.Barfi:
+      print('Barfi are sweet');
+      break;
+    case Snacks.Idli:
+      print('Idlis are popular');
+      break;
+    case Snacks.Samosa:
+      print('Samosa are loved by all');
+      break;
+    default:
+      print("Pakora or Gulabjamun are liked by most people");
+      break;
+  }
+
+  sayGreeting(name, greet: 'Namaste');
+
+  for (var i = 1.0; i < 3.0; i += 0.5) {
+    var length = i + 0.5;
+    print('Rect $length x $i = ${getRectArea(length, i)}');
+  }
 }
