@@ -1,9 +1,3 @@
-void sayHello(String name, String greeting) {
-  print('$greeting, $name');
-}
-
-enum Snacks { Samosa, Barfi, Idli }
-
 void main() {
   /*
 Final var - You know you will not change it again. Can only be set once.
@@ -14,7 +8,9 @@ Final var - You know you will not change it again. Can only be set once.
   petBreed = 'Ridgeback';
   var petName = 'Zyraa';
   print('Pet is $petBreed');
+*/
 
+  /*
 Enumerated types - Use to represent easy-to-remember pre-defined const values
   - enum Lang {Python, Dart, C++, Java}
   - The .name property gives the string value of the enum
@@ -22,14 +18,17 @@ Enumerated types - Use to represent easy-to-remember pre-defined const values
   - You can get all these using .values property
   - Use with switch with built-in warning if not handling all enum values
   - Trailing comma helps with formatting in code
+*/
 
+  /*
 Switch - Control flow statement
 - Use with int, string, or constants using ==
 - Each non-empty clause ends with break
 - Can use break,continue, throw, re-throw or return
 - Use default clause to execute code when nothing matches your variable
 - Example - Use snacks : Samosa, Gulabjamun, Barfi, Murukku, Dhokla, Idli
-
+*/
+  /*
 Functions - Allow to keep often used code in one place.
 - Mostly should do something
 - Can be called multiple times, DRY principle
