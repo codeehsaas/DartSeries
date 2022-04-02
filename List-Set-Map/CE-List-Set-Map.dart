@@ -1,11 +1,22 @@
 void main(List<String> args) {
   /*
-  Dynamic & null type
+  Dynamic
   - Normally Dart can infer var, final or const variables
   - There's another type dynamic which can be used in specific cases
   - var x = 'Zyraa';
   - x = 10 <not allowed>
-  - dynamic kuchBhi = 'Zyraa'
+  - dynamic x = 'Zyraa'
+
+  Null
+  - All types are non-nullable by default
+  - To accept null, add the ? after the type name
+  - Like in String? petName, List<String?>, <int?>[]
+  - <int?>[ 1, 2, 3, null, 6, 10]
+  - Use the null aware index operator nos?[idx]
+  - String? petName=null;
+  - To call methods or properties on nullable types use the null-aware
+  - operator like below
+  - var nameLength = petName?.length
    */
 
   /*
@@ -54,6 +65,8 @@ void main(List<String> args) {
   - For a key that isn't in a map, you get a null on return
   -  var dayWeek = {'Mon': 1, 'Tue': 2, 'Wed': 3, 'Thu': 4, 'Fri': 5};
   - Example: Find count of characters in String: Mary had a little lamb
+  - Retrieving from map using [key], requires null-safe operation.
+  - Either you can check for null or use ! operator.
   - Comprehension
    -   var squareMap = {for (var i in nos) 'Square of $i': i * i};
    */

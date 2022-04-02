@@ -43,10 +43,10 @@ void main(List<String> args) {
 
   var dogBreeds = ["'GSD'", 'Ridgeback', 'Rottweiler', 'Labrador', 'Beagle'];
 
-  var nos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var nos = <int?>[1, 2, 3, 4, 5, 6, 7, null, 9, 10];
   final lstOfStrings = [
     for (var i in nos)
-      if (i.isEven) '$i'
+      if (i != null && i.isEven) print('$i is Even')
   ];
 
   print(dogBreeds.runtimeType);
@@ -54,7 +54,7 @@ void main(List<String> args) {
 
   var mixed = [1, 4, 9.5, 10];
 
-  var nums = mixed.whereType<int>(); //also List<int>.from(mixed);
+  var nums = mixed.whereType<int>();
   print(nums);
 
   var reciprocals = nums.map<double>((e) => 1 / e);
@@ -78,13 +78,36 @@ void main(List<String> args) {
     'pollen': 64,
     'cats': 128
   };
+
+  String? nullString = null;
+  var sLength = nullString?.length;
+  print('NUll string type: ${sLength.runtimeType}, length: ${sLength?.isEven}');
+
+  var sentence = 'A sunny day';
+  var chars = sentence.split('');
+  var charMap = <String, int>{};
+
+  print('Char count in: $sentence');
+
+  for (var c in chars) {
+    if (c.trim().isEmpty) continue;
+
+    int charCount = 1;
+
+    if (charMap.containsKey(c)) {
+      charCount = charMap[c]! + charCount;
+    }
+    charMap[c] = charCount;
+  }
+  print(charMap);
+
   var tomAllegry = 11; //diff:5 => 16 + 4 + 1
   print(getValuesForCode(allergenMap.values.toList(), tomAllegry));
   print(isValidCCNo('4539319503436467')); //4539319503436467
   print(isValidCCNo('8273123273520569'));
 
   var name = 'Zyraa';
-  print(name.split('').toSet());
+  var nameChars = name.split('').toSet();
   print(getPrimeFactors(110));
 }
 
