@@ -108,6 +108,8 @@ void main(List<String> args) {
 
   var name = 'Zyraa';
   var nameChars = name.split('').toSet();
+  print('Name chars: $nameChars');
+
   print(getPrimeFactors(110));
 }
 
