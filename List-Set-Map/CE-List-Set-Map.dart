@@ -8,7 +8,8 @@ void main(List<String> args) {
   - dynamic x = 'Zyraa'
 
   Null
-  - All types are non-nullable by default
+  - Special keyword means "no value".
+   - All types are non-nullable by default
   - To accept null, add the ? after the type name
   - Like in String? petName, List<String?>, <int?>[]
   - <int?>[ 1, 2, 3, null, 6, 10]
@@ -64,6 +65,7 @@ void main(List<String> args) {
   - Without type, you may create a Map<dynamic, dynamic>
   - For a key that isn't in a map, you get a null on return
   -  var dayWeek = {'Mon': 1, 'Tue': 2, 'Wed': 3, 'Thu': 4, 'Fri': 5};
+  - To iterate, you can use .entries, .forEach
   - Example: Find count of characters in String: Mary had a little lamb
   - Retrieving from map using [key], by default returns a nullable type.
   - Either you can check for null or use ! operator.
