@@ -92,12 +92,15 @@ void main(List<String> args) {
   for (var c in chars) {
     if (c.trim().isEmpty) continue;
 
-    int charCount = 1;
+    int newCharCount;
 
     if (charMap.containsKey(c)) {
-      charCount = charMap[c]! + charCount;
+      var currentCharCount = charMap[c]!;
+      newCharCount = currentCharCount + 1;
+    } else {
+      newCharCount = 1;
     }
-    charMap[c] = charCount;
+    charMap[c] = newCharCount;
   }
   print(charMap);
 

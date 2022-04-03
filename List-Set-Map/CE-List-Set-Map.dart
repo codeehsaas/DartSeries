@@ -42,7 +42,7 @@ void main(List<String> args) {
    -whereType() will filter by type. toList will copy & preserve type
     - var nos = [10, 5.5, 15, 2.8, 3.2, 'Zyraa', 'Turner'];
   - print(nos.whereType<String>());
-   -To create with right type, create a <int>[] within, add to itm and return it
+   -To create with right type, create a <int>[] within, add to item and return it
    */
 
   /*
@@ -65,7 +65,7 @@ void main(List<String> args) {
   - For a key that isn't in a map, you get a null on return
   -  var dayWeek = {'Mon': 1, 'Tue': 2, 'Wed': 3, 'Thu': 4, 'Fri': 5};
   - Example: Find count of characters in String: Mary had a little lamb
-  - Retrieving from map using [key], requires null-safe operation.
+  - Retrieving from map using [key], by default returns a nullable type.
   - Either you can check for null or use ! operator.
   - Comprehension
    -   var squareMap = {for (var i in nos) 'Square of $i': i * i};
