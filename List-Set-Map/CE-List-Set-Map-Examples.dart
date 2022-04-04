@@ -81,7 +81,8 @@ void main(List<String> args) {
 
   String? nullString = null;
   var sLength = nullString?.length;
-  print('NUll string type: ${sLength.runtimeType}, length: ${sLength?.isEven}');
+  print(
+      'NUll string type: ${sLength.runtimeType}, length: ${nullString?.length.isEven}');
 
   var sentence = 'A sunny day';
   var chars = sentence.split('');

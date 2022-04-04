@@ -18,6 +18,9 @@ void main(List<String> args) {
   - To call methods or properties on nullable types use the null-aware
   - operator like below
   - var nameLength = petName?.length
+  - If you check a variable with nullable type to see if it is not null,
+  Dart then promotes the variable to the underlying non-nullable type:
+
    */
 
   /*
@@ -68,6 +71,7 @@ void main(List<String> args) {
   - To iterate, you can use .entries, .forEach
   - Example: Find count of characters in String: Mary had a little lamb
   - Retrieving from map using [key], by default returns a nullable type.
+  - If the Key in no in the map, you get a null value.
   - Either you can check for null or use ! operator.
   - Comprehension
    -   var squareMap = {for (var i in nos) 'Square of $i': i * i};
