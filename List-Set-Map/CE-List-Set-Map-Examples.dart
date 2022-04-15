@@ -1,47 +1,9 @@
+nullToUpperCase(String? name) {
+  if (name != null) print(name.toUpperCase());
+}
+
 void main(List<String> args) {
-  /*
-  Dynamic type
-  - Normally Dart can infer var, final or const variables
-  - There's another type dynamic which can be used in specific cases
-  - var x = 'Zyraa';
-  - x = 10 <not allowed>
-   */
-  /*
-  List - Also called Arrays in other languages
-  - Index are always zero-based
-  - [idx] also called using subscript operator
-  - You can display and assign using [] operator
-  - for (var e in list) {} will print the items at each stage with var e
- - List Methods -
-   - first (Error: bad state on Empty list), last,
-   - add, insert (position, item), removeAt(idx), remove(item)
-   - clear (empties list), contains(item), indexOf(item) -1 not found
-   - List Type can be assigned in front <String> and still use var for variable
-   - To make it readonly, add const before the list []
-   - Using final in the front, still allows setting with [idx]. Ony stops re-assignment
-   - However const can report an error during runtime
-   - The spread operator allows you to insert values if another list into 1st one
-   - runtimeType will print the list <type>
-   -whereType() will filter by type. toList will copy & preserve type
-   -To create with right type, create a <int>[] within, add to itm and return it
-   */
-
-  /*
-  Set - An unordered collection of unique items
-  - To create an empty set use <String>{}. Without type, you may create a Map<dynamic, dynamic>
-  - To add use the add, for single, or addAll to add from a list
-  - You can create directly using Set.from([..])
-  - Use contains() or containsAll() to check single or list items.
-  - Use intersection to give you similar items from 2 sets
-  -
-   */
-  /*
-  Map
-  - Comprehension
-   -   var squareMap = {for (var i in nos) 'Square of $i': i * i};
-   */
-
-  var dogBreeds = ["'GSD'", 'Ridgeback', 'Rottweiler', 'Labrador', 'Beagle'];
+  print('null to upperCase: ${nullToUpperCase("zyraa")}');
 
   var nos = <int?>[1, 2, 3, 4, 5, 6, 7, null, 9, 10];
   final lstOfStrings = [
@@ -49,24 +11,54 @@ void main(List<String> args) {
       if (i != null && i.isEven) print('$i is Even')
   ];
 
-  print(dogBreeds.runtimeType);
   print(lstOfStrings);
 
-  var mixed = [1, 4, 9.5, 10];
+  var mixed = [1, 4, 6, 7.2, 8.4, 9, 10];
 
-  var nums = mixed.whereType<int>();
-  print(nums);
+  final nums = mixed.whereType<int>();
+  print('nums: $nums');
 
-  var reciprocals = nums.map<double>((e) => 1 / e);
-  print(reciprocals);
+  var lstFun = (int n) => n % 2 == 0;
+  var addTwo = (int n) => n + 2;
+  print('Mapped: ${nums.where(lstFun).map(addTwo)}');
+
+  print('From lstFun: ${lstFun.runtimeType} ${nums.where(lstFun)}');
+
+  var reciprocals = [
+    ...nums,
+    22,
+    ...[5, 10]
+  ];
+
+  print(
+      'reciprocal map 1/e: ${reciprocals.map<double?>((e) => double.tryParse((1 / e).toStringAsFixed(4)))}');
 
   var nullLst = [
     0,
-    ...[null]
+    10,
+    ...[10, 15, 20, 25, 30].where((element) => element.isEven)
   ];
-  print(nullLst);
+  print('List comp...: $nullLst');
+
+  final setNos = {0, ...nullLst};
+  print('Set comp...: $setNos');
 
   print(List<int>.generate(10, (index) => index * index));
+
+  final movies = [
+    {
+      'name': 'War',
+      'genre': 'Action',
+      'ratings': [4, 5.0, 3.5],
+    },
+    {
+      'name': 'Scream',
+      'genre': 'horror',
+      'ratings': [3.0, 2.5, 4],
+    }
+  ];
+
+  print([2, 3.4, 5.0, 4].map((e) => e.toDouble()));
 
   final allergenMap = {
     'eggs': 1,
@@ -92,16 +84,15 @@ void main(List<String> args) {
 
   for (var c in chars) {
     if (c.trim().isEmpty) continue;
-
-    int newCharCount;
+    int charCount;
 
     if (charMap.containsKey(c)) {
       var currentCharCount = charMap[c]!;
-      newCharCount = currentCharCount + 1;
+      charCount = currentCharCount + 1;
     } else {
-      newCharCount = 1;
+      charCount = 1;
     }
-    charMap[c] = newCharCount;
+    charMap[c] = charCount;
   }
   print(charMap);
 

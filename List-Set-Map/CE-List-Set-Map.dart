@@ -18,19 +18,25 @@ void main(List<String> args) {
   - To call methods or properties on nullable types use the null-aware
   - operator like below
   - var nameLength = petName?.length
-  - If you check a variable with nullable type to see if it is not null,
+  - If you check a variable with nullable type (== null or !=null) to see if it is not null,
   Dart then promotes the variable to the underlying non-nullable type:
+  - if(petName !=null) print(petName.length);
 
    */
 
   /*
+  Function Variables
+  - var funOdd = (int n) => n % 3 == 0;
+  - var funAddTwo = (int n) => n + 3;
   List - Also called Arrays in other languages
   - Index are always zero-based
   - [idx] also called using subscript operator
   - You can display and assign using [] operator
+  - You can also initialise with the literal syntax:
+  - nos = [for(var i=1; i<= 10; i++) i*i];
   - You can add another list using the ...spread operator
   - var pets = ['Tiger', 'Shera'];
-  - var petNames = <String>['Zyraa', 'Rover', 'Ran', 'Mindy', 'Hut', ...pets]
+  - var petNames = <String>['Zyraa', 'Rover', 'Noorie', ...pets]
   - Anonymous functions () =>
   - for (var e in list) {} will print the items at each stage with var e
  - List Methods -
@@ -46,6 +52,7 @@ void main(List<String> args) {
    -whereType() will filter by type. toList will copy & preserve type
     - var nos = [10, 5.5, 15, 2.8, 3.2, 'Zyraa', 'Turner'];
   - print(nos.whereType<String>());
+  - List comprehension [1, 2, ...[10, 15, 20, 25].where()]
    -To create with right type, create a <int>[] within, add to item and return it
    */
 
@@ -53,13 +60,14 @@ void main(List<String> args) {
   Set - An unordered collection of unique items
   - To create an empty set use <String>{}.
   - To add use the add, for single, or addAll to add from a list
-  - You can create from a list using Set<String>.from([..])
-  - var petList = <String>['GSD', 'Labrador', 'Ridgeback', 'GSD', 'Rottweiler'];
-  - var petBreeds = Set<String>.from(petList);
-  - var anotherBreed = <String>{'Spaniel', 'Malinois', 'GSD', 'Ridgeback'};
+  - You can create from a list using Set<String>.from([..]) or list.toSet()
+  - To retrieve an item, use Set.elementAt(idx)
   - Use contains() or containsAll() to check single or list items.
   - Use intersection to give you similar items from 2 sets
-  -
+  - Use Union to get combination of all unique elements
+  - Use difference to get the items in first set and not in second
+  - nato = {'Belgium', 'Canada', 'France', 'USA', 'UK', 'Italy'}
+  - northAmerica = {'Canada', 'USA', 'Mexico'}
    */
 
   /*

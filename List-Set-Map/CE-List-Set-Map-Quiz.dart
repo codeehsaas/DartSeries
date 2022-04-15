@@ -8,8 +8,8 @@ void main(List<String> args) {
 
   Isogram is a word in which character repeat
   For example:
-   - evening is NOT an Isogram since e and n repeat
-  - dart is AN Isogram since no character repeats
+   - evening is AN Isogram since e and n repeat
+  - dart is NOT AN Isogram since no character repeats
 
 - Hint: You can use a Set object to store the characters.
  - If the length is same as the variable, it's NOT an Isogram
@@ -26,7 +26,7 @@ void main(List<String> args) {
   - In that case, just print 'Chole is not served here!' when you
     get to it using the for loop.
   - For other items, add it to the total cost for the whole order
-  - If the no of items is ordered more than 3, then give a 5% discount
+  - If the no of items is ordered more than 2, then give a 5% discount
   - in the final total.
   - Show the final cost of the order after any discount (like above)
   - Something like this:
