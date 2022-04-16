@@ -56,6 +56,38 @@ void main(List<String> args) {
    -To create with right type, create a <int>[] within, add to item and return it
    */
 
+  var petBreeds = ['GSD', 'Ridgeback', 'Labrador', 'Spaniel'];
+
+  print('2nd element: ${petBreeds[1]}');
+  print('Last el: ${petBreeds.last}');
+  print('First el: ${petBreeds.first}');
+
+  petBreeds.forEach((pet) {
+    print('Breed: $pet');
+    print('--------');
+  });
+
+  petBreeds.removeAt(3);
+  print(petBreeds);
+
+  var mixed = <dynamic>[1, 2.5, 3, 4.8, 5, 9, 10, 'Dart', 'Zyraa'];
+  print(mixed.whereType<String>());
+
+  var nos = List.generate(10, (index) => index + 5);
+  print('Generated: $nos');
+
+  var allNos = [...nos, ...mixed];
+  print('allNos: $allNos');
+
+  var lstComp = [
+    for (var i = 0; i < 10; i++)
+      if (i.isEven) (i + 3)
+  ];
+  print('lstComp: $lstComp');
+
+  var petName = 'Zyraa';
+  var petNameChars = petName.split('');
+  print('petName.split: $petNameChars');
   /*
   Set - An unordered collection of unique items
   - To create an empty set use <String>{}.
@@ -69,6 +101,15 @@ void main(List<String> args) {
   - nato = {'Belgium', 'Canada', 'France', 'USA', 'UK', 'Italy'}
   - northAmerica = {'Canada', 'USA', 'Mexico'}
    */
+  var petSet = petNameChars.toSet();
+  var nameSet = {'a', 'b', 'c', 'd'};
+
+  print('petSet: $petSet');
+  print('petSet 2 el: ${petSet.elementAt(1)}');
+
+  print('Common: ${petSet.intersection(nameSet)}');
+  print('Difference: ${petSet.difference(nameSet)}');
+  print('Union: ${petSet.union(nameSet)}');
 
   /*
   Map
@@ -84,4 +125,25 @@ void main(List<String> args) {
   - Comprehension
    -   var squareMap = {for (var i in nos) 'Square of $i': i * i};
    */
+
+  var dayWeek = {'Mon': 1, 'Tue': 2, 'Wed': 3, 'Thu': 4, 'Fri': 5};
+  print('Mon: ${dayWeek['Mon']}');
+  dayWeek.forEach((key, value) {
+    print('Key: $key Value: $value');
+  });
+
+  var dayList = 'evening'.split('');
+  print('Day: $dayList');
+  var dayCharMap = <String, int>{};
+  for (var c in dayList) {
+    if (!dayCharMap.containsKey(c)) {
+      dayCharMap[c] = 1;
+    } else {
+      dayCharMap[c] = dayCharMap[c]! + 1;
+    }
+  }
+  print('dayCharMap: $dayCharMap');
+  var nosLst = [1, 2, 3, 4, 5];
+  var cubeMap = {for (var n in nosLst) 'Cube of $n': n * n * n};
+  print('cubeMap: $cubeMap');
 }
