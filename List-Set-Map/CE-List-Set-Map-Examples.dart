@@ -105,7 +105,8 @@ void main(List<String> args) {
   var nameChars = name.split('').toSet();
   print('Name chars: $nameChars');
 
-  print(getPrimeFactors(110));
+  var primeNo = 110;
+  print('Prime factors of $primeNo: ${getPrimeFactors(primeNo)}');
 }
 
 List<int> getPrimeFactors(int no) {
